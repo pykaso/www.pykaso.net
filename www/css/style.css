@@ -100,10 +100,14 @@ html, body {
     border-radius: 4px;
   }
 
-  /* Apps Section */
-  .apps-section {
+  /* Work Section */
+  .work-section {
     margin-top: 3em;
     padding-bottom: 3em;
+  }
+
+  .work-section + .work-section {
+    margin-top: 1.5em;
   }
 
   .section-title {
@@ -117,7 +121,7 @@ html, body {
     margin-bottom: 1.5em;
   }
 
-  .apps-grid {
+  .cards-grid {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -126,7 +130,7 @@ html, body {
     padding: 0 20px;
   }
 
-  .app-card {
+  .card {
     display: block;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
@@ -138,19 +142,19 @@ html, body {
     transition: all 0.2s ease;
   }
 
-  .app-card:hover,
-  .app-card:focus {
+  .card:hover,
+  .card:focus {
     background: rgba(255, 255, 255, 0.25);
     transform: translateY(-2px);
     outline: none;
   }
 
-  .app-card:focus-visible {
+  .card:focus-visible {
     outline: 2px solid rgba(255, 255, 255, 0.8);
     outline-offset: 2px;
   }
 
-  .app-name {
+  .card-name {
     display: block;
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 600;
@@ -159,7 +163,7 @@ html, body {
     margin-bottom: 4px;
   }
 
-  .app-desc {
+  .card-desc {
     display: block;
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 300;
