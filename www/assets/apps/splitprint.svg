@@ -1,0 +1,26 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Split Print app icon">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd9a0"/>
+      <stop offset="0.55" stop-color="#ff9f6b"/>
+      <stop offset="1" stop-color="#ff7a59"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe7a6"/>
+      <stop offset="0.6" stop-color="#ffb55f"/>
+      <stop offset="1" stop-color="#ff8d49"/>
+    </radialGradient>
+    <clipPath id="round"><rect x="0" y="0" width="240" height="240" rx="54"/></clipPath>
+  </defs>
+  <g clip-path="url(#round)">
+    <rect width="240" height="240" fill="url(#sky)"/>
+    <circle cx="158" cy="86" r="34" fill="url(#sun)"/>
+    <path d="M0 240 L0 168 L58 112 L104 150 L150 96 L240 168 L240 240 Z" fill="#7a3b2e" opacity="0.92"/>
+    <path d="M0 240 L0 200 L72 150 L132 188 L240 138 L240 240 Z" fill="#5a2a22" opacity="0.95"/>
+    <!-- split / tile lines -->
+    <g stroke="#ffffff" stroke-width="6" opacity="0.85">
+      <line x1="120" y1="0" x2="120" y2="240"/>
+      <line x1="0" y1="120" x2="240" y2="120"/>
+    </g>
+  </g>
+</svg>

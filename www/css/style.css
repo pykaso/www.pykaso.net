@@ -38,7 +38,7 @@ html, body {
   }
 
   .container {
-    padding-top: 6em;
+    padding-top: 2.5em;
   }
 
   .socialbar{
@@ -102,12 +102,12 @@ html, body {
 
   /* Work Section */
   .work-section {
-    margin-top: 3em;
-    padding-bottom: 3em;
+    margin-top: 2em;
+    padding-bottom: 1.25em;
   }
 
   .work-section + .work-section {
-    margin-top: 1.5em;
+    margin-top: 1em;
   }
 
   .section-title {
@@ -122,24 +122,31 @@ html, body {
   }
 
   .cards-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-    max-width: 320px;
+    max-width: 760px;
     margin: 0 auto;
     padding: 0 20px;
   }
 
+  /* Lone orphan (odd count): last card spans full width — no featured promotion. */
+  .cards-grid > .card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
   .card {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 12px;
-    padding: 16px 20px;
+    padding: 12px 16px;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: background 0.2s ease, transform 0.2s ease;
   }
 
   .card:hover,
@@ -154,20 +161,96 @@ html, body {
     outline-offset: 2px;
   }
 
+  .thumb {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 22%;
+    object-fit: cover;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .thumb--mono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.12) 100%);
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;          /* allow text to ellipsize instead of overflowing */
+    flex: 1 1 auto;
+  }
+
   .card-name {
     display: block;
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.25;
     color: #FFFFFF;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .card-desc {
     display: block;
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 300;
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.85);
-    line-height: 1.4;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.35;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .plat-pill {
+    flex-shrink: 0;
+    white-space: nowrap;
+    align-self: center;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+    padding: 3px 10px;
+  }
+
+  @media (max-width: 640px) {
+    .cards-grid {
+      grid-template-columns: 1fr;
+      max-width: 360px;
+    }
+    /* Single column: orphan span is a no-op, but keep it harmless. */
+    .cards-grid > .card:last-child:nth-child(odd) {
+      grid-column: auto;
+    }
+    .card {
+      flex-wrap: wrap;
+    }
+    .plat-pill {
+      order: 3;
+      margin-left: 60px;   /* align under text, past the 48px thumb + gap */
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card {
+      transition: background 0.2s ease;
+    }
+    .card:hover,
+    .card:focus {
+      transform: none;
+    }
   }
