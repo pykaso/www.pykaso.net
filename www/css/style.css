@@ -123,16 +123,14 @@ html, body {
 
   .cards-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* minmax(0, ...) rather than a bare 1fr: a bare 1fr floors each track at its
+       auto (min-content) size, which the nowrap descriptions inflate. That made
+       the two columns unequal and pushed them past the centred container. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
-    max-width: 760px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
-  }
-
-  /* Lone orphan (odd count): last card spans full width — no featured promotion. */
-  .cards-grid > .card:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
   }
 
   .card {
@@ -229,12 +227,8 @@ html, body {
 
   @media (max-width: 640px) {
     .cards-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       max-width: 360px;
-    }
-    /* Single column: orphan span is a no-op, but keep it harmless. */
-    .cards-grid > .card:last-child:nth-child(odd) {
-      grid-column: auto;
     }
     .card {
       flex-wrap: wrap;
