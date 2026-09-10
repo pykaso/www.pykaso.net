@@ -42,7 +42,10 @@ html, body {
   }
 
   .socialbar{
-    width: 100px;
+    /* Flex-centred rather than a fixed width: the old 100px fitted exactly two
+       icons and would have wrapped the third. */
+    display: flex;
+    justify-content: center;
     height: 32px;
   }
 
@@ -88,6 +91,10 @@ html, body {
 
   .github {
     background-image: url(../assets/icon_github.png);
+  }
+
+  .x {
+    background-image: url(../assets/icon_x.png);
   }
 
   .social:focus {
