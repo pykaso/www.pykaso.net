@@ -239,6 +239,12 @@ html, body {
     .card {
       flex-wrap: wrap;
     }
+    /* Clamp the text block to the space left of the thumb (48px + 12px gap) so a
+       long description can't push the whole block onto its own line. The pill
+       still wraps below, which is the intended single-column layout. */
+    .card-body {
+      max-width: calc(100% - 60px);
+    }
     .plat-pill {
       order: 3;
       margin-left: 60px;   /* align under text, past the 48px thumb + gap */
