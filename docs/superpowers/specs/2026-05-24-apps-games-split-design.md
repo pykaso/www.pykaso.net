@@ -1,7 +1,7 @@
 # Apps / Games Split — Design
 
 **Date:** 2026-05-24
-**Scope:** `www/index.html`, `www/css/style.css`
+**Scope:** `web/index.html`, `web/css/style.css`
 **Status:** Approved
 
 ## Goal
@@ -101,7 +101,7 @@ Page title stays the same.
 
 ## Verification
 
-After implementation, open `www/index.html` in a browser and confirm:
+After implementation, open `web/index.html` in a browser and confirm:
 
 1. Two labelled sections render in order: "MY APPS" with 4 cards, "MY GAMES" with 1 card.
 2. Spacing between the two section labels is tighter than the spacing between the avatar and the first label.
