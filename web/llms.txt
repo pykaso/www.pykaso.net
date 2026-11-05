@@ -1,0 +1,24 @@
+# Lukáš Gergel (pykaso)
+
+> Lukáš Gergel, known online as pykaso, is an independent developer of apps and games for iPhone, iPad and Mac. He has been on the App Store since 2020 under the developer name "Lukas Gergel".
+
+- [Website](https://pykaso.net/)
+- [App Store developer page](https://apps.apple.com/us/developer/lukas-gergel/id1533550676)
+- [GitHub](https://github.com/pykaso)
+- [X](https://x.com/pykasonet)
+- [LinkedIn](https://www.linkedin.com/in/lukas-gergel-13316685/)
+
+## Apps
+
+- [PillFeel](https://pillfeel.pykaso.net/): private medication diary for iPhone. Log when you took a dose and how you felt, then share a PDF for a chosen period with your doctor. Not yet released; waitlist on the website.
+- [Skanae](https://skan.ae/): document scanner for iPhone and iPad that saves scans as PDF, with on-device OCR and on-device AI sorting. No account needed.
+- [Photo Album Widget](https://photoalbumwidget.app/): shows photos from an Apple Photos album in a Home Screen widget on iPhone and iPad. The iPhone widget can also appear on a compatible Mac.
+- [Photo Widget Studio](https://photowidgetstudio.eu/): create custom photo widgets for the iPhone and iPad Home Screen with layouts, frames, filters and tap shortcuts.
+- [Roamee](https://roamee.co/): travel app for iOS to plan trips, pin photos and memories to a map, and see travel stats. Co-authored by Lukáš Gergel; published by I am Roamee s.r.o.
+- [Split Print – Tile & Glue](https://split-print.pykaso.net/): Mac app that splits a large image or PDF into sheets you print on an ordinary printer and glue into one large poster.
+- [Candle: Light One for Someone](https://candle.pykaso.net/): light a virtual candle for someone on iPhone; it burns down over 24 hours, with a Home Screen widget.
+
+## Games
+
+- [Axiom of Echoes: Proof Refactor](https://axiom-of-echoes.com/): story-driven logic puzzle game for Mac. Rebuild shapes with logic blocks to recover a scientist's lost memories. Also on Steam.
+- [NotesNinja](https://notesninja.app/): arcade-style game for iPhone and iPad that teaches you to read music notes on the staff.
